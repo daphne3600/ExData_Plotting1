@@ -1,7 +1,6 @@
 library(lubridate); library(plyr); library(dplyr)
 ##Read into R, only need top  ~100,000 rows since data is by date from Dec 2006
 dataset <- read.delim("./dataset/household_power_consumption.txt", nrows = 100000, sep = ";", na.strings = "?", stringsAsFactors = FALSE) 
-unlink(temp)
 
 ##Format dates to Date class
 dataset$Date <- as.Date(dataset$Date, format = "%d/%m/%Y")
